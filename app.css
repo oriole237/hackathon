@@ -1,14 +1,18 @@
 * {
- padding: 0;
+
  margin: 0;
  box-sizing: border-box;
+}
+body {
+  background-color: #F3F3F3;
 }
 .body{
   margin-top: 88px;
   width:800px ;
   height:503px ;
   gap: 16px;
-  background: var(--Background, #F1F1F1);
+ /*background: var(--Background, #F1F1F1);*/
+  background-color: #F3F3F3;
 }
 nav{
   display: flex;
@@ -47,15 +51,6 @@ nav{
   
 }
 
-.span_search input::placeholder{
-  color: var(--grey-g-100, #B5B5B5);
-  font-family: Inter;
-  font-size: 13px;
-  font-style: normal;
-  font-weight: 500;
-  line-height: 140%;
-  
-}
 
 .span_items{
   display: flex;
@@ -215,4 +210,59 @@ nav{
   font-style: normal;
   font-weight: 400;
   line-height: 140%; /* 18.2px */
+}
+.span_search input[type="search"]::placeholder {
+  background-image: url('https://crushingit.tech/hackathon-assets/icon-search.svg');
+  background-repeat: no-repeat;
+  background-position: left center;
+  color: var(--grey-g-100, #B5B5B5);
+  font-family: Inter;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 140%;
+  padding-left: 20px;
+  stroke: white;
+  fill: white;
+  filter: brightness(7.25);
+}
+.span_search input[type="search"]::-webkit-input-placeholder {
+  color: var(--grey-g-100, #B5B5B5);
+}
+/* .trial_callout
+{
+  background-color: var(--grey-grey-300, #1A1A1A);
+  width: 8OOpx;
+  height: 56px;
+  border-radius: 8px;
+  padding: 12px 8px 12px 16px;
+  display: flex;
+  justify-content: space-between;
+
+}
+.trial_callout span {
+  color: #E3E3E3;
+} */
+/* .box-card{
+  margin: 88px 320px 0px;
+  height: 503px;
+} */
+/* .choices
+{
+  width: 800px;
+  height: 431px;
+  background-color: white;
+  border-radius: 18px;
+  border: 1px #DBDBDB;
+  gap: 16px;
+  padding: 8px ;
+} */
+@media screen and (max-width: 576.98px) {
+  .span_logo a img:nth-child(1),.span_notif span{
+    display:none;
+  }
+  .span_logo a img:nth-child(2){
+    display: block!important;
+  }
+  
 }
