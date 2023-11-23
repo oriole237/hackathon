@@ -3,13 +3,16 @@
  margin: 0;
  box-sizing: border-box;
 }
-.body{
-  margin-top: 88px;
-  width:800px ;
-  height:503px ;
+body{
   gap: 16px;
-  background: var(--Background, #F1F1F1);
+  background: #F1F1F1;
+  align-items: center;
+  font-style: normal;
+  font-family: Inter;
+  font-size: 13px;
 }
+
+/* start narbar */
 nav{
   display: flex;
   padding: 12px 16px;
@@ -44,14 +47,7 @@ nav{
   border-radius: 8px;
   border: 1px solid var(--stroke-s-200, #616161);
   background: var(--grey-g-200, #303030);
-  
-}
-
-.span_search input::placeholder{
   color: var(--grey-g-100, #B5B5B5);
-  font-family: Inter;
-  font-size: 13px;
-  font-style: normal;
   font-weight: 500;
   line-height: 140%;
   
@@ -95,9 +91,7 @@ nav{
 
 .span_notif span{
   color: var(--font-light, #E3E3E3);
-  font-family: Inter;
   font-size: 12px;
-  font-style: normal;
   font-weight: 500;
   line-height: 130%; /* 15.6px */
 }
@@ -112,15 +106,13 @@ nav{
   background: #36FBA1;
   color: rgba(0, 0, 0, 0.40);
   text-align: center;
-  font-family: Inter;
   font-size: 12px;
-  font-style: normal;
   font-weight: 500;
   line-height: 130%; /* 15.6px */
 }
 
 .dropdown_notif{
-  display: block;
+  display: none;
   z-index: 3;
   flex-direction: column;
   align-items: flex-start;
@@ -163,7 +155,6 @@ nav{
   font-style: normal;
   font-weight: 600;
   line-height: 140%; /* 18.2px */
-  border: 1px solid red;
 }
 
 .span_one button{
@@ -208,11 +199,165 @@ nav{
   align-self: stretch;
   border-radius: 8px;
   color: var(--font-dark, var(--grey-g-200, #303030));
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%; /* 18.2px */
+  text-decoration: auto;
+  font-family: Inter;
+}
+.span_name{
+  display: block;
+}
 
+.span_name p:nth-child(1){
+  color: var(--font-dark, var(--grey-g-200, #303030));
+  font-family: Inter;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 140%; /* 18.2px */
+}
+
+.span_name p:nth-child(2){
+  color: var(--grey-grey-100, var(--font-mid-2, #616161));
+
+font-size: 12px;
+font-style: normal;
+font-weight: 400;
+line-height: 130%; /* 15.6px */
+}
+
+/* .section_content{
+  display: flex;
+  width: 1440px;
+  padding-bottom: 0px;
+  flex-direction: column;
+  align-items: center;
+  gap: 32px;
+  background: var(--Background, #F1F1F1);
+} */
+
+.select_plan{
+  display: flex;
+  width: 800px;
+  padding: 12px 8px 12px 16px;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 8px;
+  background: var(--grey-grey-300, #1A1A1A);
+  margin: 8px;
+  transform: translateX(20%);
+}
+
+.extend{
+  color: var(--font-light, #E3E3E3);
+  font-family: Inter;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 140%; /* 18.2px */
+}
+
+.select_plan_btn button{
+  display: inline-flex;
+  padding: 6px 12px;
+  align-items: center;
+  gap: 8px;
+  border-radius: 6px;
+  border: 1px solid rgba(0, 0, 0, 0.10);
+  background: var(--White, #FFF);
+  box-shadow: 0px -1px 0px 0px #B5B5B5 inset;
+}
+
+.select_plan_btn span{
+  display: inline-flex;
+  padding: 6px;
+  align-items: flex-start;
+  gap: 8px;
+  border-radius: 6px;
+  
+}
+
+.select_plan_btn span img{
+  width: 20px;
+  height: 20px;
+  filter: brightness(7.25);
+}
+
+.select_plan_content{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  transform: translateX(16%);
+}
+
+.setup_guide{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 4px;
+  color: var(--font-dark, var(--grey-g-200, #303030));
   /* Text-13/regular */
   font-family: Inter;
   font-size: 13px;
   font-style: normal;
   font-weight: 400;
   line-height: 140%; /* 18.2px */
+}
+
+.setup_guide p{
+  font-weight: 600;
+}
+
+.bg_wite{
+  background-color: #fff;
+}
+
+.step{
+  line-height: 130%;
+  font-weight: 400;
+}
+
+.hide_show{
+  display: flex;
+  padding: 4px;
+  align-items: flex-start;
+  gap: 8px;
+  border-radius: 6px;
+}
+
+.hide_show img{
+  width: 20px;
+  height: 20px;
+}
+
+.elts_content{
+  display: flex;
+  /* width: 800px; */
+  padding: 8px;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 16px;
+  border-radius: 18px;
+  border: 1px solid var(--stroke-s-50, #DBDBDB);
+  background: var(--White, #FFF);
+  box-shadow: 0px 1px 0px 0px rgba(0, 0, 0, 0.05);
+}
+
+.elt_row{
+  display: flex;
+  padding: 8px;
+  align-items: center;
+  gap: 120px;
+  align-self: stretch;
+  border-radius: 10px;
+  color: var(--font-dark, var(--grey-g-200, #303030));
+  font-weight: 500;
+  line-height: 140%; /* 18.2px */
+}
+
+.elt_row img{
+  width: 24px;
+  height: 24px;
 }
