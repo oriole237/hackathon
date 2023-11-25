@@ -10,10 +10,15 @@ console.log("fd");
 }
 
 var btn_user = document.getElementById("btn-user-letter");
+var  menu_content = document.getElementById("user-menu-content");
+var btn = document.querySelector(".btn");
+console.log(btn, 'btff');
 
-btn_user.addEventListener('click', function(){alert("d")
+btn.addEventListener('click', function(e){
+    console.log(e, "evveee")
     menu_content = document.getElementById("user-menu-content");
     menu_content.classList.toggle("show");
+    menu_content.classList.toggle("hide");
 });
 
 function hideShowMenu(id){console.log("d")

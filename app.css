@@ -117,9 +117,13 @@
   .show{
     display: block;
   }
+  
+  .hide{
+    display: none;
+  }
 
  .menu{
-   display: none;
+   /* display: none; */
    z-index: 3;
    flex-direction: column;
    align-items: flex-start;
