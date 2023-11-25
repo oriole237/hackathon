@@ -249,6 +249,20 @@ line-height: 130%; /* 15.6px */
   margin: 8px;
   transform: translateX(20%);
 }
+.select_plan_d{
+  transform: translateX(21%);
+  display: flex;
+  width: 800px;
+  padding: 8px;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 16px;
+  border-radius: 18px;
+  border: 1px solid var(--stroke-s-50, #DBDBDB);
+  background: var(--White, #FFF);
+  box-shadow: 0px 1px 0px 0px rgba(0, 0, 0, 0.05);
+  margin-bottom: 25px;
+}
 
 .extend{
   color: var(--font-light, #E3E3E3);
@@ -259,7 +273,7 @@ line-height: 130%; /* 15.6px */
   line-height: 140%; /* 18.2px */
 }
 
-.select_plan_btn button{
+.select_plan_btn a{
   display: inline-flex;
   padding: 6px 12px;
   align-items: center;
@@ -268,6 +282,7 @@ line-height: 130%; /* 15.6px */
   border: 1px solid rgba(0, 0, 0, 0.10);
   background: var(--White, #FFF);
   box-shadow: 0px -1px 0px 0px #B5B5B5 inset;
+  text-decoration: auto;
 }
 
 .select_plan_btn span{
@@ -332,20 +347,15 @@ line-height: 130%; /* 15.6px */
   height: 20px;
 }
 
-.elts_content{
+.setup_guide1{
   display: flex;
-  /* width: 800px; */
   padding: 8px;
-  flex-direction: column;
-  align-items: flex-end;
-  gap: 16px;
-  border-radius: 18px;
-  border: 1px solid var(--stroke-s-50, #DBDBDB);
-  background: var(--White, #FFF);
-  box-shadow: 0px 1px 0px 0px rgba(0, 0, 0, 0.05);
+  justify-content: space-between;
+  align-items: flex-start;
+  align-self: stretch;
 }
 
-.elt_row{
+.setup_guide2{
   display: flex;
   padding: 8px;
   align-items: center;
@@ -353,11 +363,108 @@ line-height: 130%; /* 15.6px */
   align-self: stretch;
   border-radius: 10px;
   color: var(--font-dark, var(--grey-g-200, #303030));
+
+  /* Text-13/medium */
+  font-family: Inter;
+  font-size: 13px;
+  font-style: normal;
   font-weight: 500;
   line-height: 140%; /* 18.2px */
+}
+
+.elt_row{
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  align-self: stretch;
 }
 
 .elt_row img{
   width: 24px;
   height: 24px;
+  filter: contrast(0);
+}
+
+.elt_row_content{
+  display: flex;
+  padding: 2px 0px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
+  flex: 1 0 0;
+}
+
+.row_body{
+  align-self: stretch;
+  color: var(--font-mid-2, #616161);
+  /* Text-13/medium */
+  font-family: Inter;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 140%; /* 18.2px */
+}
+
+.row_body a {
+  color: var(--states-focused, #005BD3);
+  font-family: Inter;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 140%;
+}
+
+button.btn_store{
+  display: flex;
+  padding: 6px 12px;
+  align-items: center;
+  gap: 8px;
+  border-radius: 6px;
+  border-top: 1.5px solid var(--stroke-light-100, rgba(255, 255, 255, 0.20));
+  border-right: 1.5px solid var(--stroke-light-100, rgba(255, 255, 255, 0.20));
+  border-left: 1.5px solid var(--stroke-light-100, rgba(255, 255, 255, 0.20));
+  background: #404040;
+  box-shadow: 0px 0px 0px 1.5px #333, 0px 1px 0px 1.5px #333, 0px 2px 0px 0px #000;
+  color: var(--font-light, #F6F3F6);
+
+  /* Text-12/Semi bold */
+  font-family: Inter;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 130%; /* 15.6px */
+}
+
+.elt_row_content2{
+  width: 156.145px;
+  height: 120px;
+  flex-shrink: 0;
+}
+
+.bg_img1{
+  background: url("https://crushingit.tech/hackathon-assets/customise-store.png"), lightgray 50% / cover no-repeat;
+}
+
+.bg_img2{
+  background: url("https://crushingit.tech/hackathon-assets/product.png"), lightgray 50% / cover no-repeat;
+}
+
+.bg_img3{
+  background: url("https://crushingit.tech/hackathon-assets/website.png"), lightgray 50% / cover no-repeat;
+}
+
+.bg_img4{
+  background: url("https://crushingit.tech/hackathon-assets/name-store.png"), lightgray 50% / cover no-repeat;
+}
+
+.bg_img5{
+  background: url("https://crushingit.tech/hackathon-assets/payment.png"), lightgray 50% / cover no-repeat;
+}
+
+.default_btn{
+  display: flex;
+  padding: 6px 12px;
+  align-items: center;
+  gap: 8px;
+  border-radius: 6px;
 }

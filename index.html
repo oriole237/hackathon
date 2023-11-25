@@ -1,3 +1,4 @@
+<!-- <!DOCTYPE html> -->
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -82,55 +83,116 @@
   
   <!-- content section -->
   <section class="section_content">
-    <div class="select_plan">
+    <div class="select_plan" id="trial_msg">
       <span class="extend">Extend your trial for $1/month for 3 months on select plans.</span> 
       <span class="select_plan_btn">
-        <button>Select a plan</button>
-        <span>
-          <img  src="https://crushingit.tech/hackathon-assets/icon-cross.svg" alt="close">
+        <a href="https://www.shopify.com/pricing">Select a plan</a>
+        <span id="span_close">
+          <img src="https://crushingit.tech/hackathon-assets/icon-cross.svg" alt="close">
         </span>
       </span>
 
     </div> 
 
     <!-- setup guide -->
-    <div class="select_plan bg_wite">
-      <div class="setup_guide">
-        <p>Setup guide</p>
-        Use this personalized guide to get your store up and running.
-        
-        <span class="step">1/5 Completed </span>
-      </div>
+    <div class="select_plan_d bg_wite">
+      <div class="setup_guide1">
+        <div class="setup_guide">
+          <p>Setup guide</p>
+          Use this personalized guide to get your store up and running.
+          
+          <span class="step">1/5 Completed </span>
+        </div>
 
-      <div class="hide_show">
-        <img src="https://crushingit.tech/hackathon-assets/icon-arrow-down.svg" alt="down">
+        <div class="hide_show">
+          <img src="https://crushingit.tech/hackathon-assets/icon-arrow-down.svg" alt="down">
+        </div>
       </div>
 
       <!-- display steps -->
-      <div class="elts_content">
+      <div class="setup_guide2">
         <div class="elt_row">
-          <img src="https://crushingit.tech/hackathon-assets/icon-spinner.svg" alt="spinner" />
-          Customize your online store
-        </div>
+          <img src="https://crushingit.tech/hackathon-assets/icon-dashed-circle.svg" alt="spinner" />
+          <div class="elt_row_content">
+            <span class="row_title">Customize your online store</span>
+            <span class="row_body">
+              Choose a theme and add your logo, colors, and images to reflect your brand. <a href="#">Learn more</a>
+            </span>
 
-        <div class="elt_row">
-          <img src="https://crushingit.tech/hackathon-assets/icon-spinner.svg" alt="spinner" />
-          Add your first product
+            <button class="btn_store">Customize theme</button>
+          </div>
+          <div class="elt_row_content2 bg_img1">
+          </div>
         </div>
+      </div>
 
+      <div class="setup_guide2">
         <div class="elt_row">
-          <img src="https://crushingit.tech/hackathon-assets/icon-spinner.svg" alt="spinner" />
-          Add a custom domain
+          <img src="https://crushingit.tech/hackathon-assets/icon-dashed-circle.svg" alt="spinner" />
+          <div class="elt_row_content">
+            <span class="row_title">Add your first product</span>
+            <span class="row_body">
+              Write a description, add photos, and set pricing for the products you plan to sell. <a href="#">Learn more</a>
+            </span>
+
+            <button class="btn_store">Add product</button>
+            <!-- <button class="default_btn">Import product</button> -->
+          </div>
+
+          <div class="elt_row_content2 bg_img2">
+          </div>
         </div>
+      </div>
 
+      <div class="setup_guide2">
         <div class="elt_row">
-          <img src="https://crushingit.tech/hackathon-assets/icon-spinner.svg" alt="spinner" />
-          Name your store
+          <img src="https://crushingit.tech/hackathon-assets/icon-dashed-circle.svg" alt="spinner" />
+          <div class="elt_row_content">
+            <span class="row_title">Add a custom domain</span>
+            <span class="row_body">
+              Your current domain is 222219.myshopify.com but you can add a custom domain to help customers find 
+              your online store. <a href="#">Learn more</a>
+            </span>
+
+            <button class="btn_store">Add domain</button>
+          </div>
+          <div class="elt_row_content2 bg_img3">
+          </div>
         </div>
+      </div>
 
+      <div class="setup_guide2">
         <div class="elt_row">
-          <img src="https://crushingit.tech/hackathon-assets/icon-spinner.svg" alt="spinner" />
-          Set up a payment provider
+          <img src="https://crushingit.tech/hackathon-assets/icon-dashed-circle.svg" alt="spinner" />
+          <div class="elt_row_content">
+            <span class="row_title">Name your store</span>
+            <span class="row_body">
+              Your temporary store name is currently Davii collections.
+              The store name appears in your admin and your online store. <a href="#">Learn more</a>
+            </span>
+
+            <button class="btn_store">Name store</button>
+          </div>
+
+          <div class="elt_row_content2 bg_img4">
+          </div>
+        </div>
+      </div>
+
+      <div class="setup_guide2">
+        <div class="elt_row">
+          <img src="https://crushingit.tech/hackathon-assets/icon-dashed-circle.svg" alt="spinner" />
+          <div class="elt_row_content">
+            <span class="row_title">Set up a payment provider</span>
+            <span class="row_body">
+              Choose a payment provider to start accepting payments. You’ll need to create an account with the 
+              payment provider and set it up with your Shopify store. <a href="#">Learn more</a>
+            </span>
+
+            <button class="btn_store">Set up payment</button>
+          </div>
+          <div class="elt_row_content2 bg_img5">
+          </div>
         </div>
       </div>
 
