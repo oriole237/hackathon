@@ -1,8 +1,10 @@
 // Your javascript goes here
 function RemoveBoxTrial(){
-    console.log("yes");
-
-    var box = document.getElementById("trial_callout");
-
+    var box = document.getElementById("select_plan");
     box.style.display = "none";
+}
+function display_settings(){
+console.log("fd");
+    var box = document.getElementById("dropdown_notification");
+    box.style.display = "block";
 }
