@@ -8,3 +8,7 @@ console.log("fd");
     var box = document.getElementById("dropdown_notification");
     box.style.display = "block";
 }
+
+function change_icon(){
+    console.log("changement");
+}
