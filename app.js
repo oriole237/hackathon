@@ -1,9 +1,10 @@
 // Your javascript goes here
-
-let span_close = document.getElementById("span_close");
-
-// mask trial plan message
-span_close.onclick = function(){
-    let trial_msg = document.getElementById("trial_msg");
-    trial_msg.style.display = "none";
+function RemoveBoxTrial(){
+    var box = document.getElementById("select_plan");
+    box.style.display = "none";
+}
+function display_settings(){
+console.log("fd");
+    var box = document.getElementById("dropdown_notification");
+    box.style.display = "block";
 }
