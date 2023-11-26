@@ -491,6 +491,11 @@ padding-top: 12px; padding-bottom: 12px; padding-left: 16px; padding-right: 8px;
   background-color: #D1D1D1;
 }
 
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
 button.btn_store{
   /* display: flex; */
   padding: 6px 12px;
