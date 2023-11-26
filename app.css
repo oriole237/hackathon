@@ -33,8 +33,15 @@
   justify-content: center; align-items: center; gap: 8px; display: flex
  }
  #select_plan{
-padding-top: 12px; padding-bottom: 12px; padding-left: 16px; padding-right: 8px; background: #1A1A1A; 
-  border-radius: 8px; justify-content: space-between; align-items: center; display: inline-flex
+padding-top: 12px; 
+padding-bottom: 12px;
+ padding-left: 16px; 
+ padding-right: 8px; 
+ background: #1A1A1A; 
+  border-radius: 8px; 
+  justify-content: space-between;
+  border: 1px rgba(0, 0, 0, 0.10) solid;
+   align-items: center; display: inline-flex
  }
  span.extend{
   color: #E3E3E3; font-size: 13px; 
@@ -68,17 +75,10 @@ padding-top: 12px; padding-bottom: 12px; padding-left: 16px; padding-right: 8px;
    flex: 1 0 0;
    width: 33%;
  }
- .span_search{
-   width: 43%;
-   padding-right: 2px;
- }
- 
- .span_search input{
-   display: inline-flex;
-   width: 100%;
+
+ .span_search {
    height: 32px;
    padding: 8px;
-   align-items: center;
    gap: 6px;
    border-radius: 8px;
    border: 1px solid var(--stroke-s-200, #616161);
@@ -86,6 +86,7 @@ padding-top: 12px; padding-bottom: 12px; padding-left: 16px; padding-right: 8px;
    color: var(--grey-g-100, #B5B5B5);
    font-weight: 500;
    line-height: 140%;
+   width: 480px;   justify-content: flex-start; align-items: center; display: flex
    
  }
  
@@ -98,6 +99,7 @@ padding-top: 12px; padding-bottom: 12px; padding-left: 16px; padding-right: 8px;
  }
  
  .span_items .btn_notif{
+  border: none;
    display: flex;
    width: 32px;
    height: 32px;
@@ -130,6 +132,7 @@ padding-top: 12px; padding-bottom: 12px; padding-left: 16px; padding-right: 8px;
  }
  
  .btn-davii {
+  border: none;
    display: flex;
    height: 28px;
    padding: 9px 5px 10px 5px;
@@ -354,6 +357,7 @@ padding-top: 12px; padding-bottom: 12px; padding-left: 16px; padding-right: 8px;
    border-radius: 6px;
    border: 1px solid rgba(0, 0, 0, 0.10);
    background: var(--White, #FFF);
+   color: #323232;
    box-shadow: 0px -1px 0px 0px #B5B5B5 inset;
   text-decoration: auto;
  }
@@ -558,7 +562,7 @@ button.btn_store{
   border-radius: 6px;
 }
 
-.span_search input[type="search"]::placeholder {
+ input[type="search"]::placeholder {
   background-image: url('https://crushingit.tech/hackathon-assets/icon-search.svg');
   background-repeat: no-repeat;
   background-position: left center;
@@ -570,11 +574,13 @@ button.btn_store{
   line-height: 140%;
   padding-left: 20px;
   stroke: white;
-  fill: white;
-  filter: brightness(7.25);
+  fill: #B5B5B5;
+  filter:  contrast(0);
 }
 
-
+input[type="search"]{
+  color: #B5B5B5; font-size: 13px; font-family: Inter; font-weight: 500; line-height: 18.20px; word-wrap: break-word" type="search
+}
 @media screen and (min-width:769px) {
   .select_plan_d, #select_plan{
     width: 800px;
@@ -605,6 +611,30 @@ button.btn_store{
   .span_search {
     width: 67%;
     padding-right: 10px;
+  }
+  .span_items .btn_notif{
+    background-color: #1A1A1A;
+  }
+  .select_plan_d {
+    
+    min-width: 100%;
+  }
+  #select_plan{
+    min-width: 100%;
+    height: 104px;
+    gap: 16px;
+    flex-direction: column;
+  }
+  .select_plan_btn span{
+    position: absolute;
+    right: 0;
+    top: 6em;
+
+  }
+  .select_plan_btn  a{
+    left: 1.2em;
+    top: 10em;
+    position: absolute;
   }
 }
 
