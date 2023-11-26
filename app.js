@@ -42,6 +42,7 @@ var width = 0;
 img_spinner.forEach(function(spinner){
     spinner.addEventListener('click', function(e){
        
+        console.log(e)
         if(e.target.src == "https://crushingit.tech/hackathon-assets/icon-dashed-circle.svg"){
             e.target.style.filter = "contrast(0)";
             e.target.src = "https://crushingit.tech/hackathon-assets/icon-spinner.svg";
@@ -101,13 +102,13 @@ for(let i=0; i<texts.length; i++){
             }
         }
 
-        event.target.parentNode.parentNode.parentNode.classList.toggle("bg_gris");
-        event.target.parentNode.querySelector(".btn_store").classList.toggle("show_flex");
-        event.target.parentNode.querySelector(".btn_store").classList.toggle("hide");
-        event.target.parentNode.querySelector(".row_body").classList.toggle("hide");
-        event.target.parentNode.querySelector(".row_body").classList.toggle("show");
-        event.target.parentNode.parentNode.querySelector(".elt_row_content2").classList.toggle("show");
-        event.target.parentNode.parentNode.querySelector(".elt_row_content2").classList.toggle("hide");
+        event.target.parentNode.parentNode.parentNode.classList.add("bg_gris");
+        event.target.parentNode.querySelector(".btn_store").classList.add("show_flex");
+        event.target.parentNode.querySelector(".btn_store").classList.remove("hide");
+        event.target.parentNode.querySelector(".row_body").classList.remove("hide");
+        event.target.parentNode.querySelector(".row_body").classList.add("show");
+        event.target.parentNode.parentNode.querySelector(".elt_row_content2").classList.add("show");
+        event.target.parentNode.parentNode.querySelector(".elt_row_content2").classList.remove("hide");
         
     });
 }
