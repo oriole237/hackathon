@@ -45,12 +45,12 @@ img_spinner.forEach(function(spinner){
             }, 550);
 
         }else{
-            e.target.style.filter = "contrast(0)";
-            e.target.src = "https://crushingit.tech/hackathon-assets/icon-spinner.svg";
+            // e.target.style.filter = "contrast(0)";
+            // e.target.src = "https://crushingit.tech/hackathon-assets/icon-spinner.svg";
 
             setTimeout(function() {
                 e.target.src="";
-                // e.target.style.filter = "contrast(0)";
+                e.target.style.filter = "contrast(0)";
                 e.target.src = "https://crushingit.tech/hackathon-assets/icon-dashed-circle.svg";
             
             }, 550);
