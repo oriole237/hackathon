@@ -151,7 +151,7 @@ padding-top: 12px; padding-bottom: 12px; padding-left: 16px; padding-right: 8px;
 } */
 
   .show{
-    display: flex;
+    display: grid;
   }
   
   .hide{
@@ -189,7 +189,6 @@ padding-top: 12px; padding-bottom: 12px; padding-left: 16px; padding-right: 8px;
     gap: 16px; 
   z-index: 3;
   width: 383px;
-  gap: 16px;
   top: 64px;
  }
 #dropdown_notification >div:nth-child(1){
@@ -430,6 +429,7 @@ padding-top: 12px; padding-bottom: 12px; padding-left: 16px; padding-right: 8px;
  
  .setup_guide2{
    /* display: none; */
+   flex-direction: column;
    padding: 8px;
    align-items: center;
    gap: 120px;
@@ -488,7 +488,7 @@ padding-top: 12px; padding-bottom: 12px; padding-left: 16px; padding-right: 8px;
 }
 
 .bg_gris{
-  background-color: #D1D1D1;
+  background-color: #F1F1F1;
 }
 
 @keyframes spin {
@@ -521,26 +521,32 @@ button.btn_store{
   width: 156.145px;
   height: 120px;
   flex-shrink: 0;
+  /* left: 0px; top: 0px; position: absolute */
 }
-
+/* .img_content{
+  width: 156.14px; height: 120px; position: relative
+}
+.img_content div:nth-child(1){
+  width: 153.31px; height: 120px; left: 0px; top: 0px; position: absolute; background: linear-gradient(180deg, white 0%, white 93%, rgba(255, 255, 255, 0) 100%)
+} */
 .bg_img1{
-  background: url("https://crushingit.tech/hackathon-assets/customise-store.png"), lightgray 50% / cover no-repeat;
+  background: url("https://crushingit.tech/hackathon-assets/customise-store.png"), #F1F1F1 50% / cover no-repeat;
 }
 
 .bg_img2{
-  background: url("https://crushingit.tech/hackathon-assets/product.png"), lightgray 50% / cover no-repeat;
+  background: url("https://crushingit.tech/hackathon-assets/product.png"), #F1F1F1 50%  / cover no-repeat;
 }
 
 .bg_img3{
-  background: url("https://crushingit.tech/hackathon-assets/website.png"), lightgray 50% / cover no-repeat;
+  background: url("https://crushingit.tech/hackathon-assets/website.png"), #F1F1F1 50%  / cover no-repeat;
 }
 
 .bg_img4{
-  background: url("https://crushingit.tech/hackathon-assets/name-store.png"), lightgray 50% / cover no-repeat;
+  background: url("https://crushingit.tech/hackathon-assets/name-store.png"), #F1F1F1 50%  / cover no-repeat;
 }
 
 .bg_img5{
-  background: url("https://crushingit.tech/hackathon-assets/payment.png"), lightgray 50% / cover no-repeat;
+  background: url("https://crushingit.tech/hackathon-assets/payment.png"), #F1F1F1 50%  / cover no-repeat;
 }
 
 .default_btn{
@@ -585,8 +591,8 @@ button.btn_store{
   .span_logo {
     width: auto;
   }
-  .select_plan,.select_plan_d{
-    border-radius: none;
+  .select_plan,.select_plan_d,#select_plan{
+    border-radius: unset;
   }
   #user-info span {
     display: none;

@@ -26,6 +26,7 @@ console.log("fd");
 const texts = document.querySelectorAll('span.row_title');
 const divS = document.querySelector('div.row_body');
 const icon_hide = document.querySelector('div.hide_show');
+const icon_H = document.getElementById('hide_show');
 const divG = document.querySelectorAll('div.setup_guide2');
 const btn_store = document.querySelectorAll('.btn_store');
 const img_spinner = document.querySelectorAll('.img_spinner');
@@ -42,7 +43,7 @@ img_spinner.forEach(function(spinner){
                 e.target.style.filter = "contrast(1)";
                 e.target.src = "https://crushingit.tech/hackathon-assets/icon-checkmark-circle.svg";
             
-            }, 550);
+            }, 50);
 
         }else{
             // e.target.style.filter = "contrast(0)";
@@ -53,7 +54,7 @@ img_spinner.forEach(function(spinner){
                 e.target.style.filter = "contrast(0)";
                 e.target.src = "https://crushingit.tech/hackathon-assets/icon-dashed-circle.svg";
             
-            }, 550);
+            }, 50);
         }
     
     });
@@ -68,8 +69,8 @@ for(let i=0; i<texts.length; i++){
         texts[i].parentNode.querySelector(".btn_store").classList.toggle("hide");
         texts[i].parentNode.querySelector(".row_body").classList.toggle("hide");
         texts[i].parentNode.querySelector(".row_body").classList.toggle("show");
-        texts[i].parentNode.parentNode.querySelector(".elt_row_content2").classList.toggle("show");
-        texts[i].parentNode.parentNode.querySelector(".elt_row_content2").classList.toggle("hide");
+        texts[i].parentNode.parentNode.querySelector("div.elt_row_content2").classList.toggle("show");
+        texts[i].parentNode.parentNode.querySelector("div.elt_row_content2").classList.toggle("hide");
         
         // console.log(texts[i].parentNode.parentNode.parentNode, "next texxttt")
         // divS.style.display = divS.style.display =="none" ? "block" : "none";
@@ -79,10 +80,13 @@ for(let i=0; i<texts.length; i++){
 }
 
 icon_hide.addEventListener('click',function(){
-    // console.log(divG, "ell dic");
-    
+   console.log(divG, "ell dic",icon_H);
+  if(  icon_H.src == "https://crushingit.tech/hackathon-assets/icon-arrow-down.svg"){
+    icon_H.src = "https://crushingit.tech/hackathon-assets/icon-arrow-up.svg"
+  }else{
+    icon_H.src = "https://crushingit.tech/hackathon-assets/icon-arrow-down.svg"
+  }
     for(let i=0; i<divG.length; i++){
-        // console.log(divG[i], "jd");
         divG[i].classList.toggle("hide");
         divG[i].classList.toggle("show");
         divG[0].classList.toggle("bg_gris");
