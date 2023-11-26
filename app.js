@@ -9,6 +9,57 @@ console.log("fd");
     box.style.display = "block";
 }
 
+function change_icon(){
+    console.log("changement");
+    var image =  document.getElementById("test_s");
+    if(image.src == "https://crushingit.tech/hackathon-assets/icon-dashed-circle.svg"){
+        image.src= "https://crushingit.tech/hackathon-assets/icon-spinner.svg";
+        image.src= "https://crushingit.tech/hackathon-assets/icon-checkmark-circle.svg";
+        image.style.filter= "none";
+    }else{
+        image.src= "https://crushingit.tech/hackathon-assets/icon-dashed-circle.svg";
+        image.style.filter= "contrast(0)";
+
+    }
+   
+}
+const texts = document.querySelectorAll('span.row_title');
+const divS = document.querySelector('div.row_body');
+const icon_hide = document.querySelector('div.hide_show');
+const divG = document.querySelectorAll('div.setup_guide2');
+const btn_store = document.querySelectorAll('.btn_store');
+
+
+for(let i=0; i<texts.length; i++){
+    texts[i].addEventListener('click',function(){
+        console.log(texts[i], "texxttt")
+        texts[i].parentNode.parentNode.parentNode.classList.toggle("bg_gris");
+        texts[i].parentNode.querySelector(".btn_store").classList.toggle("show_flex");
+        texts[i].parentNode.querySelector(".btn_store").classList.toggle("hide");
+        texts[i].parentNode.querySelector(".row_body").classList.toggle("hide");
+        texts[i].parentNode.querySelector(".row_body").classList.toggle("show");
+        texts[i].parentNode.parentNode.querySelector(".elt_row_content2").classList.toggle("show");
+        texts[i].parentNode.parentNode.querySelector(".elt_row_content2").classList.toggle("hide");
+        
+        console.log(texts[i].parentNode.parentNode.parentNode, "next texxttt")
+        // divS.style.display = divS.style.display =="none" ? "block" : "none";
+        // divG.style.background = divS.style.display =="none" ? "initial" : " #F1F1F1";
+        
+    });
+}
+
+icon_hide.addEventListener('click',function(){
+    console.log(divG, "ell dic");
+    
+    for(let i=0; i<divG.length; i++){
+        console.log(divG[i], "jd");
+        divG[i].classList.toggle("hide");
+        divG[i].classList.toggle("show");
+        divG[0].classList.toggle("bg_gris");
+    }
+    
+});
+
 const btn_user = document.getElementById("btn-user-letter");
 const btn_notif = document.getElementById("btn-notif");
 const notif_content = document.getElementById("dropdown_notification");
@@ -25,3 +76,4 @@ btn_notif.addEventListener('click', function(){
     notif_content.classList.toggle("hide");
     menu_content.classList.add("hide");
 });
+
