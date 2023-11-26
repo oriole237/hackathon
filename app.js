@@ -9,36 +9,19 @@ console.log("fd");
     box.style.display = "block";
 }
 
-var btn_user = document.getElementById("btn-user-letter");
-var  menu_content = document.getElementById("user-menu-content");
-var btn = document.querySelector(".btn");
-console.log(btn, 'btff');
+const btn_user = document.getElementById("btn-user-letter");
+const btn_notif = document.getElementById("btn-notif");
+const notif_content = document.getElementById("dropdown_notification");
+const menu_content = document.getElementById("user-menu-content");
 
-btn.addEventListener('click', function(e){
-    console.log(e, "evveee")
-    menu_content = document.getElementById("user-menu-content");
+btn_user.addEventListener('click', function(){
     menu_content.classList.toggle("show");
     menu_content.classList.toggle("hide");
+    notif_content.classList.add("hide");
 });
 
-function hideShowMenu(id){console.log("d")
-    var menu_content = "";
-    // var menu = document.querySelector(".menu");
-    // // var btn_user = document.getElementById("btn-user-letter");
-    // menu.style.display =  "none";
-    // btn_user.style.display =  "none";
-
-    //chech btn clicked
-    if(id == "btn-user-letter"){
-        menu_content = document.getElementById("user-menu-content");
-    }else if(id =="btn-notif"){
-        menu_content = document.getElementById("dropdown_notification");
-    }
-
-    if(menu_content != ""){console.log("d")
-        menu_content.classList.toggle("show");
-    }    
-
-}
-
-// hideShowMenu("btn-notif");
+btn_notif.addEventListener('click', function(){
+    notif_content.classList.toggle("show");
+    notif_content.classList.toggle("hide");
+    menu_content.classList.add("hide");
+});
