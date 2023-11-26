@@ -30,6 +30,7 @@ const divG = document.querySelectorAll('div.setup_guide2');
 const btn_store = document.querySelectorAll('.btn_store');
 const img_spinner = document.querySelectorAll('.img_spinner');
 
+//spinner toggle implementation
 img_spinner.forEach(function(spinner){
     spinner.addEventListener('click', function(e){
        
@@ -60,29 +61,40 @@ img_spinner.forEach(function(spinner){
 });
 
 
+//step details show or hide
 for(let i=0; i<texts.length; i++){
-    texts[i].addEventListener('click',function(){
+    texts[i].addEventListener('click',function(event){
 
-        texts[i].parentNode.parentNode.parentNode.classList.toggle("bg_gris");
-        texts[i].parentNode.querySelector(".btn_store").classList.toggle("show_flex");
-        texts[i].parentNode.querySelector(".btn_store").classList.toggle("hide");
-        texts[i].parentNode.querySelector(".row_body").classList.toggle("hide");
-        texts[i].parentNode.querySelector(".row_body").classList.toggle("show");
-        texts[i].parentNode.parentNode.querySelector(".elt_row_content2").classList.toggle("show");
-        texts[i].parentNode.parentNode.querySelector(".elt_row_content2").classList.toggle("hide");
-        
-        // console.log(texts[i].parentNode.parentNode.parentNode, "next texxttt")
-        // divS.style.display = divS.style.display =="none" ? "block" : "none";
-        // divG.style.background = divS.style.display =="none" ? "initial" : " #F1F1F1";
+        for(let j=0; j<texts.length; j++){
+
+            if(texts[j].id != event.target.id){
+                texts[j].parentNode.parentNode.parentNode.classList.remove("bg_gris");
+                texts[j].parentNode.querySelector(".btn_store").classList.remove("show_flex");
+                texts[j].parentNode.querySelector(".btn_store").classList.add("hide");
+                texts[j].parentNode.querySelector(".row_body").classList.add("hide");
+                texts[j].parentNode.querySelector(".row_body").classList.remove("show");
+                texts[i].parentNode.parentNode.querySelector(".elt_row_content2").classList.remove("show");
+                texts[j].parentNode.parentNode.querySelector(".elt_row_content2").classList.add("hide");
+            }
+        }
+
+        event.target.parentNode.parentNode.parentNode.classList.toggle("bg_gris");
+        event.target.parentNode.querySelector(".btn_store").classList.toggle("show_flex");
+        event.target.parentNode.querySelector(".btn_store").classList.toggle("hide");
+        event.target.parentNode.querySelector(".row_body").classList.toggle("hide");
+        event.target.parentNode.querySelector(".row_body").classList.toggle("show");
+        event.target.parentNode.parentNode.querySelector(".elt_row_content2").classList.toggle("show");
+        event.target.parentNode.parentNode.querySelector(".elt_row_content2").classList.toggle("hide");
         
     });
 }
 
+
+//all steps show or hide implementation
 icon_hide.addEventListener('click',function(){
-    // console.log(divG, "ell dic");
     
     for(let i=0; i<divG.length; i++){
-        // console.log(divG[i], "jd");
+      
         divG[i].classList.toggle("hide");
         divG[i].classList.toggle("show");
         divG[0].classList.toggle("bg_gris");
@@ -96,12 +108,14 @@ const btn_notif = document.getElementById("btn-notif");
 const notif_content = document.getElementById("dropdown_notification");
 const menu_content = document.getElementById("user-menu-content");
 
+//display or hide menu-item
 btn_user.addEventListener('click', function(){
     menu_content.classList.toggle("show");
     menu_content.classList.toggle("hide");
     notif_content.classList.add("hide");
 });
 
+//display or hide notification content
 btn_notif.addEventListener('click', function(){
     notif_content.classList.toggle("show");
     notif_content.classList.toggle("hide");
