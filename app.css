@@ -573,6 +573,7 @@ button.btn_store{
   filter: brightness(7.25);
 }
 
+
 @media screen and (min-width:769px) {
   .select_plan_d, #select_plan{
     width: 800px;
