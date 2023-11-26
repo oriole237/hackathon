@@ -46,31 +46,38 @@ img_spinner.forEach(function(spinner){
             e.target.style.filter = "contrast(0)";
             e.target.src = "https://crushingit.tech/hackathon-assets/icon-spinner.svg";
 
+            e.target.classList.add("circle-rotate-image")
+
             setTimeout(function() {
+                e.target.classList.remove("circle-rotate-image")
                 e.target.src="";
                 e.target.style.filter = "contrast(1)";
+                e.target.style.transform = "rotate(0deg)";
                 e.target.src = "https://crushingit.tech/hackathon-assets/icon-checkmark-circle.svg";
                 compt++;
                 width += 20;
                 progress_bar[0].style.width = width.toString() + "%";
                 progress_step[0].innerHTML = compt.toString() + " / 5";
                
-            }, 950);
+            }, 505);
 
         }else{
             e.target.style.filter = "contrast(0)";
             e.target.src = "https://crushingit.tech/hackathon-assets/icon-spinner.svg";
+            e.target.classList.add("circle-rotate-image")
 
             setTimeout(function() {
+                e.target.classList.remove("circle-rotate-image")
                 e.target.src="";
                 e.target.style.filter = "contrast(0)";
+                e.target.style.transform = "rotate(0deg)";
                 e.target.src = "https://crushingit.tech/hackathon-assets/icon-dashed-circle.svg";
                 compt--;
                 width -= 20;
                 progress_bar[0].style.width = width.toString() + "%";
                 progress_step[0].innerHTML = compt.toString() + " / 5";
               
-            }, 950);
+            }, 505);
         }
     
     });
