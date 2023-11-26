@@ -30,6 +30,13 @@ const icon_H = document.getElementById('hide_show');
 const divG = document.querySelectorAll('div.setup_guide2');
 const btn_store = document.querySelectorAll('.btn_store');
 const img_spinner = document.querySelectorAll('.img_spinner');
+const progress_step = document.querySelectorAll('.step span');
+const progress_bar = document.querySelectorAll('.progress_bar div div');
+
+console.log(progress_step, "stepp pr")
+console.log(progress_bar, "bar pr")
+var compt = 0;
+var width = 0;
 
 //spinner toggle implementation
 img_spinner.forEach(function(spinner){
@@ -43,7 +50,11 @@ img_spinner.forEach(function(spinner){
                 e.target.src="";
                 e.target.style.filter = "contrast(1)";
                 e.target.src = "https://crushingit.tech/hackathon-assets/icon-checkmark-circle.svg";
-            
+                compt++;
+                width += 20;
+                progress_bar[0].style.width = width.toString() + "%";
+                progress_step[0].innerHTML = compt.toString() + " / 5";
+               
             }, 950);
 
         }else{
@@ -54,7 +65,11 @@ img_spinner.forEach(function(spinner){
                 e.target.src="";
                 e.target.style.filter = "contrast(0)";
                 e.target.src = "https://crushingit.tech/hackathon-assets/icon-dashed-circle.svg";
-            
+                compt--;
+                width -= 20;
+                progress_bar[0].style.width = width.toString() + "%";
+                progress_step[0].innerHTML = compt.toString() + " / 5";
+              
             }, 950);
         }
     
