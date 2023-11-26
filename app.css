@@ -573,6 +573,9 @@ button.btn_store{
   }
 }
 @media screen and (max-width:768px) {
+  #dropdown_notification{
+    width: 358px;
+  }
   .span_logo a img:nth-child(1),#user-info span,.elt_row_content2{
     display: none;
   }
